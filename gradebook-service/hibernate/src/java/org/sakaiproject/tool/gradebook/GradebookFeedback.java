@@ -4,7 +4,7 @@ import java.io.Serializeable;
 
 public class GradebookFeedback implements Serializeable{
 	private int 	id;
-	private int 	rankMin;
+	private int 	siteId;
 	private int 	rankMin;
 	private int 	rankMax;
 	private Map<String,Integer> 	Feedback;
