@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="none"
+				   package="org.sakaiproject.tool.gradebook"
+				   default-lazy="false">
+
+	<class name="org.sakaiproject.tool.gradebook.GradebookFeedback" table="GB_FEEDBACK_RANK" discriminator-value="0">
+
+		<id name="id" column="ID" type="integer">
+			<generator class="native">
+				<param name="sequence">GB_FEEDBACK_S</param>
+			</generator>
+		</id>
+
+		<property name="siteId" column="SITE_ID" type="integer" not-null="true"/>
+		<property name="rankMin" column="RANK_MIN" type="integer" not-null="true"/>
+		<property name="rankMax" column="RANK_MAX" type="integer" not-null="true"/>
+
+		<map name="Feedback" table="GB_FEEDBACK" cascade="all" lazy="false">
+			<key column="SITE_ID"/>
+			<index column="FEEDBACK" type="string"/>
+			<element column="ID" type="integer"/>
+		</map>
+	</class>
+</hibernate-mapping>
