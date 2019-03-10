@@ -8,7 +8,10 @@ public class GradebookFeedback implements Serializeable{
 	private int 	rankMin;
 	private int 	rankMax;
 	private String 	feedback;
-
+	
+	public GradebookFeedback(){
+	}
+	
 	public void 	setId(int aId) {
 		this.id 		= aId;
 	}
