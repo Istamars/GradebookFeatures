@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true"
+				   package="org.sakaiproject.tool.gradebook"
+				   default-lazy="false">
+
+	<class name="org.sakaiproject.tool.gradebook.RankingView" table="">
+
+		<class name="" table="" mutable="false">
+			<id name="no" column="" type=""></id>
+			<property name="studentId" column="USERID" type="integer"/>
+			<property name="totalPoint" column="POINTS_EARNED" type="integer"/>
+			<property name="feedbackId" column="ID" type="integer"/>
+			<property name="uuid" column="GRADEBOOK_UID" type="integer"/>
+		</class>
+	</class>
+</hibernate-mapping>
