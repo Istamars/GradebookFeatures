@@ -15,11 +15,8 @@
 		<property name="siteId" column="SITE_ID" type="integer" not-null="true"/>
 		<property name="rankMin" column="RANK_MIN" type="integer" not-null="true"/>
 		<property name="rankMax" column="RANK_MAX" type="integer" not-null="true"/>
+		<property name="feedbak" column="FEEDBACK" type="string" not-null="true"/>
 
-		<map name="Feedback" table="GB_FEEDBACK" cascade="all" lazy="false">
-			<key column="SITE_ID"/>
-			<index column="FEEDBACK" type="string"/>
-			<element column="ID" type="integer"/>
 		</map>
 	</class>
 </hibernate-mapping>
