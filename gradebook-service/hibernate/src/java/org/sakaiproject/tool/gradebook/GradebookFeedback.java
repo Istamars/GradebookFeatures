@@ -7,14 +7,14 @@ public class GradebookFeedback implements Serializeable{
 	private int 	siteId;
 	private int 	rankMin;
 	private int 	rankMax;
-	private Map<String,Integer> 	Feedback;
+	private String 	feedback;
 
 	public void 	setId(int aId) {
 		this.id 		= aId;
 	}
 
 	public String 	getId() {
-		return id;
+		return 			id;
 	}
 
 	public void 	setSiteId(int aSiteId) {
@@ -22,7 +22,7 @@ public class GradebookFeedback implements Serializeable{
 	}
 
 	public String 	getSiteId() {
-		return siteId;
+		return 			siteId;
 	}
 
 	public void 	setRankMin(int aRankMin) {
@@ -30,7 +30,7 @@ public class GradebookFeedback implements Serializeable{
 	}
 
 	public String 	getRankMin() {
-		return rankMin;
+		return 			rankMin;
 	}
 
 	public void 	setRankMax(int aRankMax) {
@@ -38,7 +38,7 @@ public class GradebookFeedback implements Serializeable{
 	}
 
 	public String 	getRankMax() {
-		return rankMax;
+		return 			rankMax;
 	}
 
 	public void 	setFeedback(String aFeedback) {
@@ -46,6 +46,6 @@ public class GradebookFeedback implements Serializeable{
 	}
 
 	public String 	getFeedback() {
-		return feedback;
+		return 			feedback;
 	}
 }
